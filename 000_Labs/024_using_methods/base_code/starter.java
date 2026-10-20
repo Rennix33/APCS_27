@@ -13,9 +13,83 @@ class starter {
 	static ArrayList<String> arr = new ArrayList<String>();
 
 	public static void main(String args[]) throws InterruptedException {
-		// Write your code here!
+		populateArrayList();
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Welcome to Type Quest");
+		System.out.println("It is currently " + getTime());
+		System.out.println("Given a sentence, type it as fast as possible");
+		System.out.print("");
+		System.out.println("------------------------------------------");
+		while(true){
+		System.out.println("Would you like to:");
+		System.out.println("1 - Play random");
+		System.out.println("2 - Play set");
+		System.out.println("3 - Quit");
 
+		System.out.println("");
 		
+		int pick = sc.nextInt();
+		sc.nextLine();
+			if(pick == 1){
+				System.out.println("You've chosen to randomly select a sentence");
+				System.out.println("-----------------Your sentence is:-----------------");
+				String sentence = getSentence();
+    			System.out.println(sentence);
+
+    			countdown();
+    			startTimer();
+
+    			String ran_sent = sc.nextLine();
+
+				double time = endTimer();
+    			int errors = compareSentences(sentence, ran_sent);
+				double letters = lettersInSentence(sentence);
+				double words = wordsInSentence(sentence);
+
+				double lpm = letters / time * 60;
+				double wpm = words / time * 60;
+    			System.out.println("Time: " + time + " seconds");
+   			 	System.out.println("Errors: " + errors);
+				System.out.println("Letters Per Minute: " + lpm);
+				System.out.println("Words Per Minute: " + wpm);
+
+				
+			}
+			else if(pick == 2){
+				System.out.println("Please enter what number sentence you would like to play");
+				int pickSentence = sc.nextInt();
+				sc.nextLine();
+				System.out.println("");
+				System.out.println("-----------------Your sentence is:-----------------");
+				String sentence = getSentence(pickSentence);
+    			System.out.println(sentence);
+
+
+
+
+				countdown();
+    			startTimer();
+
+    			String picked_sent = sc.nextLine();
+
+				double time = endTimer();
+    			int errors = compareSentences(sentence, picked_sent);
+				double letters = lettersInSentence(sentence);
+				double words = wordsInSentence(sentence);
+
+				double lpm = letters / time * 60;
+				double wpm = words / time * 60;
+    			System.out.println("Time: " + time + " seconds");
+   			 	System.out.println("Errors: " + errors);
+				System.out.println("Letters Per Minute: " + lpm);
+				System.out.println("Words Per Minute: " + wpm);
+			}
+			
+
+			else if(pick == 3){
+				break;
+			}
+		}
 	}
 
 	// This method returns the local current time as a String
@@ -105,6 +179,13 @@ class starter {
 			typed = typed.substring(1);
 		}
 		return errors;
+
+
+		
+		
+
 	}
 
 }
+
+	

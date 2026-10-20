@@ -12,8 +12,9 @@ class starter {
 		String name = sc.nextLine();
 		System.out.println("How many times should I print your name: ");
 		int howmany = sc.nextInt();
-		int x = 0;
 
+
+		int x = 0;
 		while(true){
 			if(x == howmany){
 				break;
