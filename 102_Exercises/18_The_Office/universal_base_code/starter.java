@@ -8,55 +8,36 @@ import java.util.Scanner;
 import java.util.Random;
 
 class starter {
-	public static dwight(){
-		ID = 1987;
-		firstName = new String("Dwight");
-		lastName = new String("Schrute");
-		salary = 4416.66;
-		
-	}
-
-	public static jim(){
-		ID = 2474;
-		firstName = new String("Jim");
-		lastName = new String("Halpert");
-		salary = 4416.66;
-		
-	}
-
-	public static pam(){
-		ID = 2011;
-		firstName = new String("Pam");
-		lastName = new String("Beesly");
-		salary = 2250;
-		
-	}
-
-	public static r(){
-		ID = 2012;
-		firstName = new String("R");
-		lastName = new String("Dawg");
-		salary = 5000;
-		
-	}
-
-
-
 	public static void main(String args[]) {
 		Employee michael = new Employee();
+
+		Employee dwight = new Employee(1987, "Dwight", "Schrute", 4416.66);
+
+		Employee jim = new Employee(2474, "Jim", "Halpert", 4416.66);
+
+		Employee pam = new Employee(2011, "Pam", "Beesly", 2250);
+
+		Employee r = new Employee(2012, "R", "Dawg", 5000);
+
+		michael.raiseSalary(1);
+		dwight.raiseSalary(11);
+		jim.raiseSalary(10);
+		pam.raiseSalary(1);
+		r.raiseSalary(50);
+
 		michael.employeeToString();
+		System.out.println("Annual Salary: " + michael.getAnnualSalary());
 
-		Employee dwight = new Employee();
 		dwight.employeeToString();
+		System.out.println("Annual Salary: " + dwight.getAnnualSalary());
 
-		Employee jim = new Employee();
 		jim.employeeToString();
+		System.out.println("Annual Salary: " + jim.getAnnualSalary());
 
-		Employee pam = new Employee();
 		pam.employeeToString();
+		System.out.println("Annual Salary: " + pam.getAnnualSalary());
 
-		Employee r = new Employee();
 		r.employeeToString();
-		
+		System.out.println("Annual Salary: " + r.getAnnualSalary());
 	}
 }
