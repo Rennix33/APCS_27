@@ -11,7 +11,7 @@ import java.util.Random;
 public class Donkey {
 	private String name;
 
-	private Donkey() {
+	public Donkey() {
 		name = "Donkey";
 	}
 

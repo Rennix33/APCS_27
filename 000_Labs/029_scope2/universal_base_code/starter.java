@@ -14,9 +14,9 @@ class starter {
 		Ogre shrek = new Ogre();
 		if(shrek.isUgly()){
 			String statement = new String(shrek.name + " IS UGLY!");
+			System.out.println(statement);
+			donkey.interact(shrek);
 		}
-		System.out.println(statement);
-		donkey.interact(shrek);
 		for(int i = 0; i < 5; i++){
 			shrek.interact(donkey);
 		}

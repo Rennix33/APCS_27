@@ -15,26 +15,33 @@ public class BankAccount {
 
 	// -------CONSTRUCTORS-------
 	public BankAccount(){
-		String owner = "Unknown";
-		int AccountNumber = 0;
-		double Balance = 0.0;
-		String Status = "active";
+		owner = "Unknown";
+		AccountNumber = (int)(Math.random() * 900) + 100;
+		Balance = 0.0;
+		Status = "active";
 	}
 
 
 	public BankAccount(String o){
 		owner = o;
-		int AccountNumber = 0;
-		double Balance = 0.0;
-		String Status = "active";
+		AccountNumber = (int)(Math.random() * 900) + 100;
+		Balance = 0.0;
+		Status = "active";
 	}
 	public BankAccount(String o, double bal){
 		owner = o;
-		int AccountNumber = 0;
+		AccountNumber = (int)(Math.random() * 900) + 100;
 		Balance = bal;
-		String Status = "active";
+		Status = "active";
 	}
 
+
+	public BankAccount(String o, int acc, double bal, String s){
+    owner = o;
+    AccountNumber = acc;
+    Balance = bal;
+    Status = s;
+}
 	
 
 	// -------METHODS-------
@@ -62,11 +69,20 @@ public class BankAccount {
 	Balance = bal;
 	}
 
-	public void printDetails(){
+	
+
+	public void displayAccountInfo(){
 		System.out.println("Owner: " + owner);
 		System.out.println("Account Number: " + AccountNumber);
 		System.out.println("Balance: " + Balance);
-		System.out.print("Status: " + Status);
+		System.out.println("Status: " + Status);
+		System.out.println("");
 	}
+
+	public void checkBalance(){
+    System.out.println("Current Account Balance: $" + Balance);
+	}
+
+	 
 
 }
