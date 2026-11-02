@@ -9,13 +9,13 @@ import java.util.Random;
 
 
 public class Donkey {
-	private String name;
+	public String name;
 
 	public Donkey() {
 		name = "Donkey";
 	}
 
-	private String getName(){
+	public String getName(){
 		return name;
 	}
 

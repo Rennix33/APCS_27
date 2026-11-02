@@ -10,6 +10,7 @@ import java.util.Random;
 
 class starter {
 	public static void main(String args[]) {
+		
 		Donkey donkey = new Donkey();
 		Ogre shrek = new Ogre();
 		if(shrek.isUgly()){
@@ -17,9 +18,11 @@ class starter {
 			System.out.println(statement);
 			donkey.interact(shrek);
 		}
-		for(int i = 0; i < 5; i++){
-			shrek.interact(donkey);
-		}
+		int i = 0;
+		while(i < 5){
+    		shrek.interact(donkey);
+    		i++;
+}
 		System.out.println("That printed out " + i + " times");
 
 	}

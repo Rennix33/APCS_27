@@ -23,7 +23,44 @@ class starter {
 	}
 
 	public static void main(String args[]) {
-		// Your code goes below here
+		PooleDwarf d1 = new PooleDwarf(randName(), (int)(Math.random()*100));
+		PooleDwarf d2 = new PooleDwarf(randName(), (int)(Math.random()*100));
+		PooleDwarf d3 = new PooleDwarf(randName(), (int)(Math.random()*100));
+		PooleDwarf d4 = new PooleDwarf(randName(), (int)(Math.random()*100));
+		PooleDwarf d5 = new PooleDwarf(randName(), (int)(Math.random()*100));
+		PooleDwarf d6 = new PooleDwarf(randName(), (int)(Math.random()*100));
+		PooleDwarf d7 = new PooleDwarf(randName(), (int)(Math.random()*100));
+
+		int duplicates = 0;
+
+		if(d1.isSameName(d2.getName())){
+			 duplicates++;
+		}
+		if(d1.isSameName(d3.getName()))
+		{
+			 duplicates++;
+		}
+		if(d1.isSameName(d4.getName())) 
+		{
+			 duplicates++;
+		}
+		if(d1.isSameName(d5.getName()))
+		{
+			 duplicates++;
+		}
+		if(d1.isSameName(d6.getName()))
+		 {
+			 duplicates++;
+		}
+		if(d1.isSameName(d7.getName()))
+		 {
+			 duplicates++;
+		}
+
+		System.out.println("First dwarf: " + d1.getName());
+		System.out.println("Duplicates: " + duplicates);
+
+
 		PooleDwarf test = new PooleDwarf();
 		
 	}
