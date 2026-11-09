@@ -1,14 +1,45 @@
 /*
- *	Author:
- *  Date:
+ * Author:
+ * Date:
 */
 
 import java.util.Scanner;
 
 class starter {
+
+	public static boolean isPrime(int num){
+		int y = num - 1;
+
+		while(y >= 2){
+			if(num % y == 0){
+				return false;
+			}
+			y--;
+		}
+
+		return true;
+	}
+
+	public static void printPrimes(int player){
+		int x = 2;
+
+		while(x < player){
+			if(isPrime(x) == true){
+				System.out.println(x);
+			}
+			x++;
+		}
+	}
+
 	public static void main(String args[]) {
-		// the string "I love to learn coding remotely." will appear in
-		// the command window when you compile and run this program.
-		System.out.print("I love to learn coding remotely.");
+
+		Scanner sc = new Scanner(System.in);
+
+		System.out.print("Input a number and we'll output every prime number until your number: ");
+
+		int num = sc.nextInt();
+
+		printPrimes(num);
+
 	}
 }

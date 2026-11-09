@@ -1,10 +1,10 @@
 package pkg;
 
 public class Movie{
-    String name;
-    double rating;
-    int reviews;
-    double revenue;
+    private String name;
+    private double rating;
+    private int reviews;
+    private double revenue;
 
 
     public Movie(){
@@ -38,8 +38,11 @@ public class Movie{
             return revenue;
         }
 
-        public double addRating(double a){
-            totalRating = rating + rewiews;
+        public void addRating(double a){
+            double prevTotal = rating * rewiews;
+            double total = prebTotal + a;
+            rating++;
+            rating = total / rewiews;
             
         }
 }
