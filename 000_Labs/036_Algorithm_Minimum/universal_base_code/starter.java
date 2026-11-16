@@ -10,8 +10,11 @@ import java.util.Random;
 
 class starter {
 	public static void main(String args[]) {
-		// Your code goes below here
-		BaseClass test = new BaseClass();
+		int size = (int) (Math.random() * 150) + 51;
+		int [] arr = new int[size];
+		for(int i = )
+
+
 
 
 		
